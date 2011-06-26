@@ -30,11 +30,28 @@
 # 3. Доп. функция - поиск дублей по контрольным суммам
 #
 
+
+import optparse
+
+
+usage = u"Мониторинг за целостностью файлов на флешке.\nИспользование: %prog [options]"
+parser = optparse.OptionParser(usage)
+parser.add_option("-i", "--ini-file", dest="ini_file", help=u"Имя ini-файла")
+parser.add_option("-o", "--output-file", dest="output_file", help=u"Имя выходного файла")
+
+(options, args) = parser.parse_args()
+
+#if len(args) < 1:
+#	parser.error(u"Недостаточно аргументов. Задайте имя dso-файла для распаковки в текстовый файл. Запустите с ключем -h для справки")
+
+
+
+
 # Функция generate_file_list
 # создает список файлов и их контрольные суммы
 #
 
-def generate_file_list ():
+#def generate_file_list ():
 
 
 def main():
